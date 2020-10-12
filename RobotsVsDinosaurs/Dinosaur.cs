@@ -25,7 +25,10 @@
 
 
         //CAN DO
-
+        public void Attack()
+        {
+            energy -= 10;
+        }
 
 
 
