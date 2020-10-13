@@ -1,4 +1,6 @@
-﻿namespace RobotsVsDinosaurs
+﻿using System;
+
+namespace RobotsVsDinosaurs
 {
     public class Weapon
     {
@@ -6,37 +8,43 @@
         public string weaponType;
         public int attackPower;
         public int energyCost;
-        public string sword;
-        public string gun;
-        Weapon weapons;
+        Random random;
 
 
 
         //SPAWNS
-        public Weapon(string weaponType, int attackPower, int energyCost)
+        public Weapon()
         {
-            this.weaponType = weaponType;
-            this.attackPower = attackPower;
-            this.energyCost = energyCost;
+            weaponType = RandomWeapon();
+            if (weaponType == "Sword")
+            {
+                attackPower = 100;
+                energyCost = 50;
+            }
+            else
+            {
+                attackPower = 50;
+                energyCost = 25;
+            }
+
         }
 
 
 
 
         //CAN DO
-        public CreateWeapons()
+        public string RandomWeapon()
         {
-              weapons = new List<Weapon>();
-            Weapon sword = new Weapon("Sword", 100, 50);
-           Weapon gun = new Weapon("Gun", 50, 25);
-
-              weapons.Add(sword);
-             weapons.Add(gun);
-
+            var weapons = new string[2] { "Sword", "Gun" };
+            int randomWeapon = random.Next(0, 1);
+            return weaponType = weapons[randomWeapon];
         }
+        //public string ChooseAWeapon()
+        //{
+        //    Console.WriteLine("Choose Sword or Gun");
 
-
-
+        //}
+  
 
     }
 }

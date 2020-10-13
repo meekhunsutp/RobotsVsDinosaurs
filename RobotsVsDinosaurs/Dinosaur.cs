@@ -25,7 +25,11 @@
 
 
         //CAN DO
-
+        public void DinosaurAttack()
+        {
+            int damage = attackPower;
+            int energyUsed = 25;
+        }
 
 
 
