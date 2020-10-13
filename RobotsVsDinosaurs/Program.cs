@@ -1,11 +1,11 @@
-﻿using System;
-
-namespace RobotsVsDinosaurs
+﻿namespace RobotsVsDinosaurs
 {
     class Program
     {
         static void Main(string[] args)
         {
+
+
 
         }
     }

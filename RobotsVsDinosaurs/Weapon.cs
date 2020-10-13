@@ -1,29 +1,39 @@
-﻿using System.Collections.Generic;
-
-namespace RobotsVsDinosaurs
+﻿namespace RobotsVsDinosaurs
 {
-    class Weapon
+    public class Weapon
     {
         //HAS A
         public string weaponType;
         public int attackPower;
+        public int energyCost;
+        public string sword;
+        public string gun;
+        Weapon weapons;
 
 
-        Weapon gun = new Weapon("Gun");
-        Weapon sword = new Weapon("Sword");
-        List<Weapon> weapons = new List<Weapon>();
 
         //SPAWNS
-        public Weapon(string weaponType)
+        public Weapon(string weaponType, int attackPower, int energyCost)
         {
             this.weaponType = weaponType;
-            attackPower = 100;
+            this.attackPower = attackPower;
+            this.energyCost = energyCost;
         }
 
 
 
 
         //CAN DO
+        public CreateWeapons()
+        {
+              weapons = new List<Weapon>();
+            Weapon sword = new Weapon("Sword", 100, 50);
+           Weapon gun = new Weapon("Gun", 50, 25);
+
+              weapons.Add(sword);
+             weapons.Add(gun);
+
+        }
 
 
 

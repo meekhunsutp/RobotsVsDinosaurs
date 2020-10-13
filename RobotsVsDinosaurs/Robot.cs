@@ -1,23 +1,23 @@
-﻿using System.Collections.Generic;
-
-namespace RobotsVsDinosaurs
+﻿namespace RobotsVsDinosaurs
 {
-    class Robot
+    public class Robot
     {
         //HAS A
         public string name;
         public int health;
-        public int powerLevel;
+        public int energyLevel;
         public string weaponType;
         public int attackPower;
+        public int baseAttackPower;
+        Weapon weapon;
 
         //SPAWNS
-        public Robot(string name, string weaponType, int attackPower)
+        public Robot(string name, Weapon weapon)
         {
             this.name = name;
-            this.weaponType = weaponType;
+            attackPower = weapon.attackPower;
             health = 100;
-            powerLevel = 50;
+            energyLevel = 50;
 
         }
 
@@ -25,10 +25,7 @@ namespace RobotsVsDinosaurs
 
 
         //CAN DO
-        public void Attack()
-        {
-            powerLevel -= 10;
-        }
+
 
 
 
