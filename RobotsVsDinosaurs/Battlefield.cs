@@ -58,6 +58,7 @@ namespace RobotsVsDinosaurs
         }
         public void DinosaurAttack()
         {
+
             if (herd.dinosaursList[0].attack.energyCost <= herd.dinosaursList[0].energyLevel)
             {
                 fleet.robotList[0].health -= herd.dinosaursList[0].attack.attackPower;
