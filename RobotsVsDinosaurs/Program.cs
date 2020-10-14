@@ -12,7 +12,7 @@ namespace RobotsVsDinosaurs
         {
             Console.WriteLine("Welcome to Whose Fight is it Anyways?");
             Console.WriteLine("The game where everything's made up and the points don't matter");
-            Console.WriteLine("Staring under powered ROBOTS Versus suped up DINOSAURS");
+            Console.WriteLine("Starring under powered ROBOTS Versus suped up DINOSAURS\n\n\n");
             Battlefield battlefield = new Battlefield();
             battlefield.RunGame();
             Console.ReadLine();

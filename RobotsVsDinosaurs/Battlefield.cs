@@ -10,11 +10,13 @@ namespace RobotsVsDinosaurs
     {
         public Fleet fleet;
         public Herd herd;
+        public DinoWeapon dinoAttack;
         public Battlefield()
         {
 
             herd = new Herd();
             fleet = new Fleet();
+            dinoAttack = new DinoWeapon();
         }
  
         public void RunGame()
@@ -38,18 +40,22 @@ namespace RobotsVsDinosaurs
                 if (herd.dinosaursList[0].health <= 0)
                 {
                     herd.dinosaursList.RemoveAt(0);
+                    Console.WriteLine("Robots have killed a dinosaur!\n");
                     if (herd.dinosaursList.Count == 0)
                     {
-                        Console.WriteLine("Robots Win");
+                        Console.WriteLine("All Dinosaurs are dead!");
+                        Console.WriteLine("\n\nRobots Win");
                         break;
                     }
                 }
                 else if (fleet.robotList[0].health <= 0)
                 {
                     fleet.robotList.RemoveAt(0);
+                    Console.WriteLine("Dinosaurs have killed a robot!\n");
                     if (fleet.robotList.Count == 0)
                     {
-                        Console.WriteLine("Dinosaurs Win");
+                        Console.WriteLine("All Robots are dead!");
+                        Console.WriteLine("\n\nDinosaurs Win");
                         break;
                     }
                 }
@@ -58,7 +64,6 @@ namespace RobotsVsDinosaurs
         }
         public void DinosaurAttack()
         {
-
             if (herd.dinosaursList[0].attack.energyCost <= herd.dinosaursList[0].energyLevel)
             {
                 fleet.robotList[0].health -= herd.dinosaursList[0].attack.attackPower;
