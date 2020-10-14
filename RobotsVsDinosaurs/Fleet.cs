@@ -42,24 +42,6 @@ namespace RobotsVsDinosaurs
         }
 
 
-        //public void ChooseRoboWeapon()
-        //{
-        //    Console.WriteLine("Choose your weapon!\nInput SWORD or GUN");
-        //    weaponChoice = Console.ReadLine().ToLower();
-
-        //    if (weaponChoice == sword)
-        //    {
-        //       weapons sword;
-        //    }
-        //    else
-        //    {
-
-        //    }
-        //}
-        //public int TotalAttackPower()
-        //{
-
-        //}
 
     }
 }

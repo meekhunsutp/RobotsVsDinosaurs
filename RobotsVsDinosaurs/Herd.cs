@@ -16,9 +16,9 @@ namespace RobotsVsDinosaurs
         public Herd()
         {
             dinosaursList = new List<Dinosaur>();
-            Dinosaur tRex = new Dinosaur("TRex", 100, 100, "Chomp", 100);
-            Dinosaur raptor = new Dinosaur("Raptor", 50, 100, "Claw", 50);
-            Dinosaur ankylo = new Dinosaur("Ankylo", 100, 100, "Tailspin", 100);
+            Dinosaur tRex = new Dinosaur("TRex", 100, 100);
+            Dinosaur raptor = new Dinosaur("Raptor", 50, 100);
+            Dinosaur ankylo = new Dinosaur("Ankylo", 100, 100);
 
             dinosaursList.Add(tRex);
             dinosaursList.Add(raptor);

@@ -37,8 +37,7 @@ namespace RobotsVsDinosaurs
             Random rng = new Random();
             string[] dinoAttacks = new string[3] { "Chomp", "Tailspin", "Claw" };
             int randomAttack = rng.Next(0, dinoAttacks.Length);
-            return attackType = dinoAttacks[randomAttack]
-
+            return attackType = dinoAttacks[randomAttack];
         }
     }
 }

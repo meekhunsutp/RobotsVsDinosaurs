@@ -11,14 +11,15 @@ namespace RobotsVsDinosaurs
         static void Main(string[] args)
         {
 
-            //Battlefield battlefield = new Battlefield();
-            //battlefield.RunGame();
+            Battlefield battlefield = new Battlefield();
+            battlefield.RunGame();
+            Console.ReadLine();
 
-            Herd herd = new Herd();
-            herd.PrintDinoInList();
+            //Herd herd = new Herd();
+            //herd.PrintDinoInList();
 
-            Fleet fleet = new Fleet();
-            fleet.PrintBotsInList();
+            //Fleet fleet = new Fleet();
+            //fleet.PrintBotsInList();
         }
     }
 }

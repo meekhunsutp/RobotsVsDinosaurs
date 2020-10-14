@@ -9,20 +9,20 @@ namespace RobotsVsDinosaurs
         public string type;
         public int health;
         public int energyLevel;
-        public string attackType;
-        public int attackPower;
+        public DinoWeapon attack;
 
+        
 
 
 
         //SPAWNS
-        public Dinosaur(string type, int health, int energyLevel, string attackType, int attackPower)
+        public Dinosaur(string type, int health, int energyLevel)
         {
             this.type = type;
             this.health = health;
             this.energyLevel = energyLevel;
-            this.attackType = attackType;
-            this.attackPower = attackPower;
+            attack = new DinoWeapon();
+          
         }
 
 
