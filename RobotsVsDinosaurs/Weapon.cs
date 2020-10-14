@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
@@ -21,6 +24,11 @@ namespace RobotsVsDinosaurs
                 attackPower = 100;
                 energyCost = 50;
             }
+            else if (weaponType == "Gun")
+            {
+                attackPower = 75;
+                energyCost = 35;
+            }
             else
             {
                 attackPower = 50;
@@ -33,19 +41,26 @@ namespace RobotsVsDinosaurs
 
 
         //CAN DO
+
+        //THIS IS WORKING
+        //public string RandomWeapon()
+        //{
+        //    Random rng = new Random();
+        //    var weapons = new string[2] { "Sword", "Gun" };
+        //    int randomWeapon = rng.Next(0, 2);
+        //    return weaponType = weapons[randomWeapon];
+        //}
+        
         public string RandomWeapon()
         {
             Random rng = new Random();
-            var weapons = new string[2] { "Sword", "Gun" };
-            int randomWeapon = rng.Next(0, 2);
+            List<string> weapons = new List<string>() { "Sword", "Gun" , "Punch"};
+            int randomWeapon = rng.Next(0, weapons.Count);
             return weaponType = weapons[randomWeapon];
         }
-        //public string ChooseAWeapon()
-        //{
-        //    Console.WriteLine("Choose Sword or Gun");
+        
+        
 
-        //}
-  
 
     }
 }

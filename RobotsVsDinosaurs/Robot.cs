@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
@@ -25,11 +28,7 @@ namespace RobotsVsDinosaurs
 
 
         //CAN DO
-        public void RobotAttack()
-        {
-            int damage = this.weapon.attackPower;
-            int energyUsed = this.weapon.energyCost;
-        }
+
 
 
     }

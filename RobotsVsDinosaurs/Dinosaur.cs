@@ -28,15 +28,7 @@ namespace RobotsVsDinosaurs
 
 
         //CAN DO
-        public void DinosaurAttack()
-        {
-            //int[] dinoAttacks = new int[3] { 100, 50, 25 };
-            int[] dinoAttacks = new int[3];
-            dinoAttacks[0] = 100; //chomp
-            dinoAttacks[1] = 50; //tailspin
-            dinoAttacks[2] = 25; //claw
 
-        }
 
 
 
