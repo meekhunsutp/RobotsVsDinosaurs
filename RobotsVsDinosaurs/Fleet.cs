@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace RobotsVsDinosaurs
 {
@@ -29,7 +30,13 @@ namespace RobotsVsDinosaurs
 
         //CAN DO
 
-
+        public void PrintBotsInList()
+        {
+            foreach (Robot robot in robotList)
+            {
+                Console.WriteLine(robot);
+            }
+        }
 
 
         //public void ChooseRoboWeapon()

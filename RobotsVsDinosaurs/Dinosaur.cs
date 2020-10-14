@@ -1,4 +1,7 @@
-﻿namespace RobotsVsDinosaurs
+﻿using System.Collections.Generic;
+using System;
+
+namespace RobotsVsDinosaurs
 {
     public class Dinosaur
     {
@@ -27,8 +30,12 @@
         //CAN DO
         public void DinosaurAttack()
         {
-            int damage = attackPower;
-            int energyUsed = 25;
+            //int[] dinoAttacks = new int[3] { 100, 50, 25 };
+            int[] dinoAttacks = new int[3];
+            dinoAttacks[0] = 100; //chomp
+            dinoAttacks[1] = 50; //tailspin
+            dinoAttacks[2] = 25; //claw
+
         }
 
 

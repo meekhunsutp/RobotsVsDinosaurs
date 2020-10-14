@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace RobotsVsDinosaurs
 {
@@ -8,7 +9,7 @@ namespace RobotsVsDinosaurs
         public string name;
         public int health;
         public int energyLevel;
-        Weapon weapon;
+        public Weapon weapon;
 
 
         //SPAWNS

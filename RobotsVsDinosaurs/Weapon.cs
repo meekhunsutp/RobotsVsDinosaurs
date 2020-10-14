@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System;
 
 namespace RobotsVsDinosaurs
 {
@@ -8,7 +9,6 @@ namespace RobotsVsDinosaurs
         public string weaponType;
         public int attackPower;
         public int energyCost;
-        Random random;
 
 
 
@@ -35,8 +35,9 @@ namespace RobotsVsDinosaurs
         //CAN DO
         public string RandomWeapon()
         {
+            Random rng = new Random();
             var weapons = new string[2] { "Sword", "Gun" };
-            int randomWeapon = random.Next(0, 1);
+            int randomWeapon = rng.Next(0, 2);
             return weaponType = weapons[randomWeapon];
         }
         //public string ChooseAWeapon()

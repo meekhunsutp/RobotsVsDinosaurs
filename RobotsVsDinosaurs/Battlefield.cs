@@ -1,4 +1,7 @@
-﻿namespace RobotsVsDinosaurs
+﻿using System.Collections.Generic;
+using System;
+
+namespace RobotsVsDinosaurs
 {
     public class Battlefield
     {
@@ -31,18 +34,17 @@
         //if not equal to 0 run attacks until one side = 0
         public void RunGame()
         {
-            while (herd.dinosaursList[0].health >= 0 && fleet.robotList[0].health >= 0)
+            while (herd.dinosaursList.Count !=0 && fleet.robotList.Count !=0)
             {
-                if (herd.dinosaursList[0].health > fleet.robotList[0].health)
-                    RobotAttack();
-                else
-                {
-                    DinosaurAttack();
-                }
-                if (herd.dinosaursList[0].health <= 0 || fleet.robotList[0].health <= 0)
-                {
-
-                }
+                Fight();
+            }
+            if (herd.dinosaursList.Count == 0)
+            {
+                Console.WriteLine("Robots Win");
+            }
+            else
+            {
+                Console.WriteLine("Dinosaurs Win");
             }
 
         }
@@ -52,14 +54,41 @@
         //subtract dino attack power from robot health
         //subtract energyused from dino energy level
         //if robot still alive, move on to next, if dead, remove from array
+       
+        public void Fight()
+        {
+            while (herd.dinosaursList[0].health >= 0 && fleet.robotList[0].health >= 0)
+            {
+                if (herd.dinosaursList[0].health > fleet.robotList[0].health)
+                    RobotAttack();
+                else
+                {
+                    DinosaurAttack();
+                }
+                if (herd.dinosaursList[0].health <= 0)
+                {
+                    herd.dinosaursList.RemoveAt(0);
+                }
+                else if (fleet.robotList[0].health <= 0)
+                {
+                    fleet.robotList.RemoveAt(0);
+                }
+            }
+        }
         public void DinosaurAttack()
         {
-            
-            
-            
-            //int damage = dinosaur.attackPower;
-            //robot health -= damage;
-            //energyLevel -= 10;
+            //if (herd.dinosaursList[0].)
+            //{
+            //    herd.dinosaursList[0].health -= fleet.robotList[0].weapon.attackPower;
+            //    fleet.robotList[0].energyLevel -= fleet.robotList[0].weapon.energyCost;
+            //}
+            //else
+            //{
+            //    while (fleet.robotList[0].health > 0)
+            //    {
+            //        DinosaurAttack();
+            //    }
+            //}
 
 
         }
@@ -73,11 +102,18 @@
         //if dino still alive, move on to next, if dead, remove from array
         public void RobotAttack()
         {
-
-
-            //int damage = robot.attackPower;
-            //dinosaur health -= damage;
-            //energyLevel -= 10;
+            if(fleet.robotList[0].weapon.energyCost <= fleet.robotList[0].energyLevel)
+            {
+                herd.dinosaursList[0].health -= fleet.robotList[0].weapon.attackPower;
+                fleet.robotList[0].energyLevel -= fleet.robotList[0].weapon.energyCost;
+            }
+            else
+            {
+                while (fleet.robotList[0].health > 0)
+                {
+                    DinosaurAttack();
+                }
+            }
 
         }
 

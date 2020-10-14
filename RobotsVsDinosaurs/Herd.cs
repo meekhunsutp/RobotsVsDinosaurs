@@ -9,7 +9,6 @@ namespace RobotsVsDinosaurs
         public List<Dinosaur> dinosaursList;
 
 
-
         //SPAWNS
         public Herd()
         {
@@ -22,11 +21,7 @@ namespace RobotsVsDinosaurs
             dinosaursList.Add(raptor);
             dinosaursList.Add(ankylo);
 
-            //int[] dinoAttacks = new int[3] { 100, 50, 25 };
-            //int[] dinoAttacks = new int[3];
-            //dinoAttacks[0] = 100; //chomp
-            //dinoAttacks[1] = 50; //tailspin
-            //dinoAttacks[2] = 25; //claw
+
    
         }
 
