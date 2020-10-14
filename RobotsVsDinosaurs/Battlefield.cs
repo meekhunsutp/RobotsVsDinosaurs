@@ -8,21 +8,13 @@ namespace RobotsVsDinosaurs
 {
     public class Battlefield
     {
-        //HAS A
         public Fleet fleet;
         public Herd herd;
-        //public DinoWeapon dinoAttack;
-
-
-
-        //SPAWNS
         public Battlefield()
         {
 
-            //instant heard fleet
             herd = new Herd();
             fleet = new Fleet();
-            //dinoAttack = new DinoWeapon();
         }
  
         public void RunGame()
@@ -31,15 +23,6 @@ namespace RobotsVsDinosaurs
             {
                 Fight();
             }
-            if (herd.dinosaursList.Count == 0)
-            {
-                Console.WriteLine("Robots Win");
-            }
-            else
-            {
-                Console.WriteLine("Dinosaurs Win");
-            }
-
         }
 
         public void Fight()
@@ -55,12 +38,23 @@ namespace RobotsVsDinosaurs
                 if (herd.dinosaursList[0].health <= 0)
                 {
                     herd.dinosaursList.RemoveAt(0);
+                    if (herd.dinosaursList.Count == 0)
+                    {
+                        Console.WriteLine("Robots Win");
+                        break;
+                    }
                 }
                 else if (fleet.robotList[0].health <= 0)
                 {
                     fleet.robotList.RemoveAt(0);
+                    if (fleet.robotList.Count == 0)
+                    {
+                        Console.WriteLine("Dinosaurs Win");
+                        break;
+                    }
                 }
             }
+
         }
         public void DinosaurAttack()
         {
@@ -76,8 +70,6 @@ namespace RobotsVsDinosaurs
                     RobotAttack();
                 }
             }
-
-
         }
 
         public void RobotAttack()

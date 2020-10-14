@@ -5,17 +5,11 @@ namespace RobotsVsDinosaurs
 {
     public class Dinosaur
     {
-        //HAS A
         public string type;
         public int health;
         public int energyLevel;
         public DinoWeapon attack;
 
-        
-
-
-
-        //SPAWNS
         public Dinosaur(string type, int health, int energyLevel)
         {
             this.type = type;
@@ -24,13 +18,6 @@ namespace RobotsVsDinosaurs
             attack = new DinoWeapon();
           
         }
-
-
-
-        //CAN DO
-
-
-
 
     }
 }

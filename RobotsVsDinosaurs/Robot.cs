@@ -8,14 +8,10 @@ namespace RobotsVsDinosaurs
 {
     public class Robot
     {
-        //HAS A
         public string name;
         public int health;
         public int energyLevel;
         public Weapon weapon;
-
-
-        //SPAWNS
         public Robot(string name)
         {          
             this.name = name;
@@ -23,13 +19,6 @@ namespace RobotsVsDinosaurs
             energyLevel = 50;
             weapon = new Weapon();
         }
-
-
-
-
-        //CAN DO
-
-
 
     }
 }

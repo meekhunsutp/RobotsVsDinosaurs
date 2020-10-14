@@ -8,11 +8,7 @@ namespace RobotsVsDinosaurs
 {
     public class Herd
     {
-        //HAS A
         public List<Dinosaur> dinosaursList;
-
-
-        //SPAWNS
         public Herd()
         {
             dinosaursList = new List<Dinosaur>();
@@ -23,9 +19,6 @@ namespace RobotsVsDinosaurs
             dinosaursList.Add(tRex);
             dinosaursList.Add(raptor);
             dinosaursList.Add(ankylo);
-
-
-   
         }
 
         public void PrintDinoInList()
@@ -35,11 +28,6 @@ namespace RobotsVsDinosaurs
                 Console.WriteLine(dino);
             }
         }
-        
-        //CAN DO
-
-
-
 
     }
 }

@@ -8,14 +8,9 @@ namespace RobotsVsDinosaurs
 {
     public class Weapon
     {
-        //HAS A
         public string weaponType;
         public int attackPower;
         public int energyCost;
-
-
-
-        //SPAWNS
         public Weapon()
         {
             weaponType = RandomWeapon();
@@ -36,21 +31,6 @@ namespace RobotsVsDinosaurs
             }
 
         }
-
-
-
-
-        //CAN DO
-
-        //THIS IS WORKING
-        //public string RandomWeapon()
-        //{
-        //    Random rng = new Random();
-        //    var weapons = new string[2] { "Sword", "Gun" };
-        //    int randomWeapon = rng.Next(0, 2);
-        //    return weaponType = weapons[randomWeapon];
-        //}
-        
         public string RandomWeapon()
         {
             Random rng = new Random();

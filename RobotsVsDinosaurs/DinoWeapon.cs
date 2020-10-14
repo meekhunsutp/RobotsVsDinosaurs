@@ -11,7 +11,6 @@ namespace RobotsVsDinosaurs
         public string attackType;
         public int attackPower;
         public int energyCost;
-
         public DinoWeapon()
         {
             attackType = RandomAttack();
@@ -31,7 +30,6 @@ namespace RobotsVsDinosaurs
                 energyCost = 25;
             }
         }
-
         public string RandomAttack()
         {
             Random rng = new Random();

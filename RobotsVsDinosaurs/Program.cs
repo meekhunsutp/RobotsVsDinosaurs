@@ -15,11 +15,6 @@ namespace RobotsVsDinosaurs
             battlefield.RunGame();
             Console.ReadLine();
 
-            //Herd herd = new Herd();
-            //herd.PrintDinoInList();
-
-            //Fleet fleet = new Fleet();
-            //fleet.PrintBotsInList();
         }
     }
 }
